@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/recipes
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+graphql:
+  servlet:
+    exception-handlers-enabled: true
+    max-query-depth: 15
+    async:
+      enabled: true
+  playground:
+    enabled: true
+    cdn:
+      enabled: true
+    settings:
+      schema:
+        disable-comments: false

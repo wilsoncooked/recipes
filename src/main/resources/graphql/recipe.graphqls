@@ -1,0 +1,31 @@
+scalar Date
+
+type Query {
+    recipes: [Recipe]
+}
+
+type Recipe {
+    id: ID!
+    createdAt: Date!
+    title: String!
+    description: String
+}
+
+type Ingredient {
+    id: ID!
+    name: String!
+    quantity: String
+    unit: Unit
+}
+
+enum Unit {
+    MILLILITER
+    LITER
+    GRAM
+    KILOGRAM
+    TEASPOON
+    TABLESPOON
+    CUP
+    PINCH
+}
+

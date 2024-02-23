@@ -1,0 +1,8 @@
+
+// query recipes
+query {
+  recipes {
+    id
+    title
+  }
+}
