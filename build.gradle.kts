@@ -45,10 +45,14 @@ dependencies {
 	implementation(("com.graphql-java-kickstart:graphql-java-tools:13.0.3"))
 	implementation("com.graphql-java:graphql-java-extended-scalars:20.0")
 
+	// Logging
+	implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.springframework.graphql:spring-graphql-test")
 	testImplementation("com.graphql-java-kickstart:graphql-spring-boot-starter-test:15.0.0")
+
 
 	// Database
 	runtimeOnly("org.postgresql:postgresql")
