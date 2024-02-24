@@ -26,7 +26,8 @@ dependencies {
 	// Spring Boot
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
-	// Validation
+	// Web
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 
 	// Webflux
@@ -50,9 +51,10 @@ dependencies {
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
-	testImplementation("org.springframework.graphql:spring-graphql-test")
 	testImplementation("com.graphql-java-kickstart:graphql-spring-boot-starter-test:15.0.0")
-
+	testImplementation("org.springframework.boot:spring-boot-starter-web")
+	testImplementation("io.mockk:mockk:1.12.0")
+	testImplementation("com.ninja-squad:springmockk:3.0.1")
 
 	// Database
 	runtimeOnly("org.postgresql:postgresql")
@@ -72,4 +74,12 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+sourceSets {
+	test {
+		java {
+			setSrcDirs(listOf("src/test/intg", "src/test/unit"))
+		}
+	}
 }

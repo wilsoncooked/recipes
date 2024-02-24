@@ -1,4 +1,4 @@
-package com.wilsoncooked.recipeservice.config
+package com.wilsoncooked.recipeservice.common.config
 
 import graphql.scalars.ExtendedScalars
 import graphql.schema.GraphQLScalarType

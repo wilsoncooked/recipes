@@ -23,4 +23,3 @@ graphql:
     settings:
       schema:
         disable-comments: false
-
