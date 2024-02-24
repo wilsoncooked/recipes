@@ -1,8 +1,7 @@
-package com.wilsoncooked.recipeservice.resolver
+package com.wilsoncooked.recipeservice.api.resolver
 
-import com.wilsoncooked.recipeservice.dto.RecipeDTO
-import com.wilsoncooked.recipeservice.model.Recipe
-import com.wilsoncooked.recipeservice.service.RecipeService
+import com.wilsoncooked.recipeservice.api.dto.RecipeDTO
+import com.wilsoncooked.recipeservice.domain.service.RecipeService
 import graphql.kickstart.tools.GraphQLQueryResolver
 import mu.KLogging
 import org.springframework.stereotype.Component
@@ -10,7 +9,7 @@ import org.springframework.validation.annotation.Validated
 
 @Component
 @Validated
-class RecipeResolver(val recipeService: RecipeService): GraphQLQueryResolver {
+class RecipeQueryResolver(val recipeService: RecipeService): GraphQLQueryResolver {
 
     companion object : KLogging()
 

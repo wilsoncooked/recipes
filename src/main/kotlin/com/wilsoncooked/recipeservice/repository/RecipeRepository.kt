@@ -1,7 +1,6 @@
 package com.wilsoncooked.recipeservice.repository
 
-import com.wilsoncooked.recipeservice.model.Recipe
-import mu.KLogging
+import com.wilsoncooked.recipeservice.domain.model.Recipe
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface RecipeRepository: JpaRepository<Recipe, Int> {

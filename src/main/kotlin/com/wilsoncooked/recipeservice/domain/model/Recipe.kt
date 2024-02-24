@@ -1,4 +1,4 @@
-package com.wilsoncooked.recipeservice.model
+package com.wilsoncooked.recipeservice.domain.model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -10,7 +10,7 @@ import java.time.LocalDate
 data class Recipe (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int,
+    val id: Int? = null,
     val createdAt: LocalDate,
     val title: String,
     val description: String

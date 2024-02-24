@@ -4,6 +4,10 @@ type Query {
     recipes: [Recipe]
 }
 
+type Mutation {
+    addRecipe(title: String!, description: String): Recipe
+}
+
 type Recipe {
     id: ID!
     createdAt: Date!
